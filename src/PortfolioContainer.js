@@ -18,9 +18,9 @@ class PortfolioContainer extends Component {
           <nav>
             <div id="navigation">
               <ul className="header">
-                <li><NavLink exact to="/">About Me</NavLink></li>
+                <li><NavLink exact to="/">About</NavLink></li>
                 <li><NavLink to="/skills">Skills</NavLink></li>
-                <li><NavLink to="/work_examples">Work Examples</NavLink></li>
+                <li><NavLink to="/work_examples">Examples</NavLink></li>
                 <li><NavLink to="/playground">Playground</NavLink></li>
                 <li><NavLink to="/contact">Contact</NavLink></li>
               </ul>
