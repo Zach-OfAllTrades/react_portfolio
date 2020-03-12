@@ -1,0 +1,345 @@
+/**************************
+UNIVERSAL
+***************************/
+:root {
+  --primary-color: #ecf0f3;
+  --secondary-color: #F3F6F8;
+}
+
+*{
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Libre Baskerville', serif;
+  background-color: var(--secondary-color);
+}
+
+nav {
+  float: left;
+  margin: 0;
+  width: 200px;
+}
+
+nav div ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+  box-shadow:
+    -4px 4px 4px 0px #d1d9e6 inset,
+    4px -4px 4px 0px #ffffff inset;
+  /* box-shadow: 0px 5px 5px .5px; */
+  transition: all 1s linear, transform .2s ease-out;
+}
+
+nav div ul li {
+  display: inline;
+  list-style-type: none;
+  margin: 0px;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  /* border: 1px solid red; */
+}
+
+#test{
+  width: 50%;
+  /* border: .5px solid black; */
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  line-height: 20px;
+}
+
+nav div ul li a {
+  text-decoration: none;
+  color: black;
+  opacity: .6;
+  transition: opacity .2s linear, transform .2s ease-out;
+  line-height: 100px;
+  width: 100%;
+  margin: 0;
+  font-weight: bold;
+  display: block;
+  /* border: 1px solid blue; */
+  align-items: center;
+}
+
+.active {
+  background-color: var(--secondary-color);
+  opacity: 1;
+  /* width: 105%; */
+  box-shadow:
+    4px 4px 4px 0px #d1d9e6 inset,
+    4px -4px 4px 0px #ffffff inset;
+}
+
+.content {
+  height: 94vh;
+  padding: 20px;
+  overflow: auto;
+}
+
+/**************************
+ABOUT
+***************************/
+
+#about-container {
+  margin-top: 20%;
+  margin-left: 30%;
+}
+
+#about-title {
+  font-size: 36px;
+}
+
+#about-content{
+  /* margin: 20%; */
+}
+
+#about-title-container {
+}
+
+#about-links-wrapper {
+  margin-top: 300px;
+}
+
+#about-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/**************************
+SKILLS
+***************************/
+
+.skills {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -75px 0px 0px -75px;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background-color: var(--secondary-color);
+}
+
+.skill-level {
+  position: relative;
+  text-align: center;
+  width: 170px;
+  height: 170px;
+  margin: 2%;
+  /* border-radius: 100%; */
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  /* height: 30px;
+  width: 30px; */
+  box-shadow:
+    -8px -4px 8px 0px #ffffff,
+    8px 4px 12px 0px #d1d9e6;
+  overflow: hidden;
+}
+
+.indicator {
+  position: relative;
+  border-radius: 50%;
+  height: 170px;
+  width: 170px;
+  box-shadow:
+    -8px -4px 8px 0px #ffffff,
+    8px 4px 12px 0px #d1d9e6;
+  overflow: hidden;
+}
+
+.indicator::before,
+.indicator::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+}
+
+.indicator::before {
+  box-shadow:
+    -4px -2px 4px 0px #d1d9e6,
+    4px 2px 8px 0px #fff;
+}
+
+.indicator::after {
+  background-color: #ecf0f3;
+  box-shadow:
+    -4px -2px 4px 0px #fff,
+    4px 2px 8px 0px #d1d9e6;
+  transform: scale3d(1, 1, 1);
+  transition: opacity .25s ease-in-out, transform .25s ease-in-out;
+}
+
+.state:checked ~ .label .indicator::after {
+  transform: scale3d(.975, .975, 1) translate3d(0, 10%, 0);
+  opacity: 0;
+}
+
+.state {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 1e-5;
+  pointer-events: none;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: #394a56;
+}
+
+.skill-desc {
+  line-height: 150px;
+  z-index: 99;
+  position: absolute;
+  margin-left: 30px;
+}
+
+#skills-title-container > div {
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid blue; */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/**************************
+CONTACT
+***************************/
+
+#contact-form {
+  width: 600px;
+  height: 600px;
+  /* background-color: var(--primary-color); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* border-radius: 16px; */
+  border-radius: 32px;
+  /* box-shadow: inset 5px 5px 7px 5px rgba(0, 0, 0, 0.1),
+      inset -5px -5px 7px 5px rgba(247, 251, 255, 0.6); */
+      /* box-shadow:
+          3px 3px 6px 3px rgba(0, 0, 0, 0.1),
+          -3px -3px 3px 3px rgba(247, 251, 255, 0.5),
+          3px 3px 8px 2px rgba(0, 0, 0, 0) inset,
+          -3px -3px 7px 2px rgba(247, 251, 255, 0) inset; */
+  margin: auto;
+}
+
+#contact-header {
+  color: white;
+  width: 100%;
+  height: 10%;
+  /* background-color: rgba(0, 0, 0, 0.10); */
+  text-align: center;
+  line-height: 50px;
+  border-radius: 16px 16px 0px 0px;
+}
+
+#contact-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 80%;
+  margin-bottom: 20px;
+}
+
+#contact-input-container .text-inputs {
+  width: 80%;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  box-shadow:
+      3px 3px 6px 3px rgba(0, 0, 0, 0.1),
+      -3px -3px 3px 3px rgba(247, 251, 255, 0.5),
+      3px 3px 8px 2px rgba(0, 0, 0, 0) inset,
+      -3px -3px 7px 2px rgba(247, 251, 255, 0) inset;
+  height: 30px;
+  background-color: var(--primary-color);
+  font-family: 'Libre Baskerville', serif;
+}
+
+#contact-input-container .text-inputs:focus {
+  outline: none;
+}
+
+#contact-input-container .text-area {
+  border-radius: 5px;
+  width: 80%;
+  background-color: var(--primary-color);
+  border: 3px solid transparent;
+  box-shadow:
+      3px 3px 6px 3px rgba(0, 0, 0, 0.1),
+      -3px -3px 3px 3px rgba(247, 251, 255, 0.5),
+      3px 3px 8px 2px rgba(0, 0, 0, 0) inset,
+      -3px -3px 7px 2px rgba(247, 251, 255, 0) inset;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: 'Libre Baskerville', serif;
+}
+
+#contact-input-container .text-area:focus {
+  outline: none;
+}
+
+#contact-input-container .button {
+  background-color: var(--primary-color);
+  border: 3px solid transparent;
+  box-shadow:
+      3px 3px 6px 3px rgba(0, 0, 0, 0.1),
+      -3px -3px 3px 3px rgba(247, 251, 255, 0.5),
+      3px 3px 8px 2px rgba(0, 0, 0, 0) inset,
+      -3px -3px 7px 2px rgba(247, 251, 255, 0) inset;
+  color: rgba(0, 0, 0, 0.5);
+  width: 80%;
+  height: 30px;
+  font-family: 'Libre Baskerville', serif;
+}
+
+#contact-input-container .button:focus {
+  outline: none;
+}
+
+#contact-input-container .button:active {
+  box-shadow: inset 5px 5px 7px 5px rgba(0, 0, 0, 0.1),
+    inset -5px -5px 7px 5px rgba(247, 251, 255, 0.6);
+}
+
+#name-wrapper{
+  display: flex;
+  flex-direction: row;
+}
+
+#name-wrapper .text-inputs{
+  width: 235px;
+  margin: 5px;
+}
